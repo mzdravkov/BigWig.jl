@@ -12,14 +12,14 @@ function Record()
     return Record(0, 0, NaN32)
 end
 
-function Base.convert(::Type{GenomicFeatures.Interval}, record::Record)
-    return GenomicFeatures.Interval(
+function Base.convert(::Type{GenomicFeatures.GenomicInterval}, record::Record)
+    return GenomicFeatures.GenomicInterval(
         chrom(record), chromstart(record), chromend(record),
         GenomicFeatures.STRAND_BOTH, value(record))
 end
 
-function Base.convert(::Type{GenomicFeatures.Interval{Record}}, record::Record)
-    return convert(GenomicFeatures.Interval, record)
+function Base.convert(::Type{GenomicFeatures.GenomicInterval{Record}}, record::Record)
+    return convert(GenomicFeatures.GenomicInterval, record)
 end
 
 function BioCore.isfilled(record::Record)
