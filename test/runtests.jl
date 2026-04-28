@@ -33,7 +33,7 @@ using FormatSpecimens
         @test BigWig.hasvalue(records[1])
         @test BigWig.value(records[1]) === 3.14f0
         @test startswith(repr(records[1]), "BigWig.Record:\n")
-        interval = convert(GenomicFeatures.GenomicInterval, records[1])
+        interval = convert(GenomicFeatures.Interval, records[1])
         @test GenomicFeatures.seqname(interval) == "chr1"
         @test GenomicFeatures.leftposition(interval) === 50
         @test GenomicFeatures.rightposition(interval) === 100

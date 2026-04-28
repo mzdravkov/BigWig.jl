@@ -16,7 +16,7 @@ function Base.IteratorSize(::Type{OverlapIterator})
     return Base.SizeUnknown()
 end
 
-function GenomicFeatures.eachoverlap(reader::Reader, interval::GenomicInterval)
+function GenomicFeatures.eachoverlap(reader::Reader, interval::Interval)
     if haskey(reader.chroms, seqname(interval))
         id, _ = reader.chroms[seqname(interval)]
     else

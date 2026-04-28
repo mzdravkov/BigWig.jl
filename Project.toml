@@ -17,7 +17,8 @@ BioCore = {rev = "master", url = "https://github.com/mzdravkov/BioCore.jl"}
 BBI = "0.2"
 BioCore = "2"
 BufferedStreams = "1"
-GenomicFeatures = "3"
+GenomicFeatures = "2"
+Libz = "1"
 julia = "1"
 
 [extras]
